@@ -1,0 +1,48 @@
+.image {
+  width: 600px;
+  height: 350px;
+  margin-left: 80px;
+  margin-top: 80px;
+  margin-bottom: 80px;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  color: rgb(160, 30, 30);
+  border-radius: 8px;
+}
+// .div {
+//   background-color: red;
+//   width: 800px;
+// }
+
+.divElementOne {
+  background-color: rgb(255, 255, 255);
+  width: 850px;
+}
+.hElemen {
+  color: rgb(173, 157, 77);
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
+}
+
+.h2 {
+  text-decoration: none;
+  color: #a3924b;
+  background-color: rgb(255, 255, 255);
+  font-weight: 200;
+  font-size: 1rem;
+  padding: 20px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 1px;
+}
+.main {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
