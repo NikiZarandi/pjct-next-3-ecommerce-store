@@ -1,33 +1,34 @@
 'use client';
 
+import Link from 'next/link';
 import { useState } from 'react';
 
 export default function CookieBanner() {
-  const localStorageValue = JSON.pars
-  const
-  window.localStorage.getItem('areCookiesTermsAccepted'),
-};
+  const localStorageValue = JSON.parse(
+    window.localStorage.getItem('areCookiesTermsAccepted'),
+  );
 
-  const initialState = localStorageValue == null ? false : localStorageValue;
+  const initialState = localStorageValue === null ? false : localStorageValue;
 
-
-  const [areCookiesBannerVisible, setAreCookiesTermsAccepted] = useState(initialState);
+  const [areCookiesTermsAccepted, setAreCookiesTermsAccepted] =
+    useState(initialState);
 
   return (
-    !areCookiesBannerVisible && (
+    !areCookiesTermsAccepted && (
       <>
         <div>This is the cookie Police. Please accept terms and conditions</div>
         <button
-        onClick={() => {
-          setAreCookiesTermsAccepted(false);
-          window.localStorage.setItem(
-            'areCookiesTermsAccepted',
-            JSON.stringify(true),
-          );
-        }}
-        >Accept
+          onClick={() => {
+            setAreCookiesTermsAccepted(false);
+            window.localStorage.setItem(
+              'areCookiesTermsAccepted',
+              JSON.stringify(true),
+            );
+          }}
+        >
+          Accept
         </button>
       </>
     )
-    );
+  );
 }

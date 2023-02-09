@@ -2,6 +2,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 // import { getTrailingCommentRanges } from 'typescript';
+// eslint-disable-next-line import/no-unresolved
 import { products } from '../../database/products';
 
 // export const dynamic = 'force-dynamic';
