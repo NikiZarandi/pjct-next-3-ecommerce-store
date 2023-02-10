@@ -1,6 +1,5 @@
 import './global.scss';
-import Link from 'next/link';
-import CookieBanner from './CookieBanner';
+import CookieBanner from './cookieBanner';
 import styles from './layout.module.scss';
 
 export default function RootLayout({ children }) {
@@ -29,10 +28,10 @@ export default function RootLayout({ children }) {
                 <a href="/products">Products</a>
               </li>
               <li>
-                <a href="/aboutUs">About us</a>
+                <a href="/aboutUs">Contact</a>
               </li>
               <li>
-                <a href="/contact">Contact</a>
+                <a href="/contact">Buy</a>
               </li>
             </ul>
           </nav>

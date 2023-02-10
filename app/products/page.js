@@ -1,9 +1,8 @@
-// import { products } from 'databace/products';
 import Image from 'next/image';
 import Link from 'next/link';
 // import { getTrailingCommentRanges } from 'typescript';
 // eslint-disable-next-line import/no-unresolved
-import { products } from '../../database/products';
+import { products } from '../databace';
 
 // export const dynamic = 'force-dynamic';
 
@@ -27,14 +26,13 @@ export default function ProductsPage() {
               <Link href={`/products/${product.name.toLocaleLowerCase()}`}>
                 <h2>{product.name}</h2>
               </Link>
-              <Link href={`/products/${product.name.toLocaleLowerCase()}`}>
-                <Image
-                  src={`/images/${product.name}-${product.id}.jpeg`}
-                  alt={product.type}
-                  width="200"
-                  height="200"
-                />
-              </Link>
+
+              <Image
+                src={`/images/${product.name}-${product.id}.jpeg`}
+                alt={product.type}
+                width="200"
+                height="200"
+              />
             </div>
           );
         })}

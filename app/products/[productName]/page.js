@@ -1,39 +1,51 @@
-import dynamic from 'next/dynamic';
 import Image from 'next/image';
-import { products } from '../../../database/products';
+import { products } from '../../databace';
 
-// const products = [
-//   { id: 4, name: 'galin', type: 'jpeg' },
-//   { id: 5, name: 'tira', type: 'jpeg' },
-//   { id: 6, name: 'mina', type: 'jpeg' },
-//   { id: 7, name: 'maya', type: 'jpeg' },
-// ];
+// import { animalNotFoundMetadata } from './not-found';
+export const dynamic = 'force-dynamic';
 
-export const dynamic = 'forde-dynamic';
+// eslint-disable-next-line require-await
 
-export async function generateMetadata(props) {
-  const singleProduct = await getproduct(params, productId);
+// export async function generateMetadata(props) {
+//   return {
+//     title: `entity ${props.params.entityId} not found`,
+//     description: `There is no entity with id: ${props.params.entityId}`,
+//   };
+// }
 
-  return {
-    title: `Single product page for ${singleProduct.name}
-    `,
-    description: '',
-  };
-}
+// export default function EntityNotFound() {
+//   return <div>Sorry this Entity was not found</div>;
+// }
+// // app/error.js
 
-export default async function ProductPage(params) {
+// export const metadata = {
+//   title: 'Error',
+//   description: 'ups something went wrong',
+// };
+
+// export function Error() {
+//   return <div>Sorry this Entity was not found</div>;
+// }
+
+export default function ProducktPage({ params }) {
   const singleProduct = products.find((product) => {
-    return product.name.toLowerCase() === props.params.productName;
+    return product.name.toLowerCase() === params.productName;
   });
-  // console.log(singleProduct);
 
-  // return (
-  //   // <h2>{singleProduct.name}</h2>
-  //   <Image
-  //     src={`/images/${singleProduct.name}-${singleProduct.id}.jpeg`}
-  //     alt={singleProduct.type}
-  //     width="200"
-  //     height="200"
-  //   />
-  // );
+  return (
+    <>
+      <h1>{singleProduct.firstName}</h1>
+      <main>
+        This product is a {singleProduct.type} {singleProduct.accessory}
+        <br />
+        <Image
+          src={`/images/${singleProduct.name}-${singleProduct.id}.jpeg`}
+          alt={singleProduct.type}
+          width="200"
+          height="200"
+        />
+        <button>by now</button>
+      </main>
+    </>
+  );
 }
