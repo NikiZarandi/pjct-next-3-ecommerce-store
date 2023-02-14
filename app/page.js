@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import CookieBanner from './cookieBanner';
 import GenerateButten from './GenerateButton js./GenerateButton';
 import styles from './page.module.scss';
 
@@ -15,8 +16,8 @@ export default function HomePage() {
         </div>
         <Image
           className={styles.image}
-          src="/images/tila.jpeg"
-          alt="tila"
+          src="/images/shin.jpeg"
+          alt="shin"
           width="300"
           height="600"
         />

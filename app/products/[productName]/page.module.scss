@@ -1,0 +1,49 @@
+// .h1 {
+//   background-color: rgb(255, 255, 255);
+//   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+//     'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+//   text-decoration: none;
+//   font-size: 14px;
+//   color: rgb(136, 122, 12);
+//   display: inline-block;
+//   margin-left: 10px;
+//   margin-top: 10px;
+//   margin-bottom: -30px;
+//   padding-left: 200px;
+//   padding-right: 50px;
+// }
+
+.ring {
+  width: 30%;
+  height: 30%;
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-left: 200px;
+  padding-right: 100px;
+  display: inline-flexbox;
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  padding-top: 10px;
+  padding-bottom: 0px;
+}
+
+.placeButton {
+  width: 30%;
+  height: 30%;
+  margin-left: 10px;
+  margin-top: 6px;
+  margin-bottom: 0px;
+  padding-left: 533px;
+  padding-right: 100px;
+
+  display: flex;
+
+  padding-top: 0px;
+  padding-bottom: 2px;
+}
+
+.back {
+  background-color: white;
+}

@@ -1,50 +1,48 @@
 import Image from 'next/image';
-import { products } from '../../databace';
+import { notFound } from 'next/navigation';
+import { getProductById } from '../../../database/products';
+import { productNotFoundMetadata } from './not-found';
 
-// import { animalNotFoundMetadata } from './not-found';
 export const dynamic = 'force-dynamic';
 
-// eslint-disable-next-line require-await
+export async function generateMetadata(props: Props) {
+  const singleProduct = await getProductById(parseInt(props.params.productId));
 
-// export async function generateMetadata(props) {
-//   return {
-//     title: `entity ${props.params.entityId} not found`,
-//     description: `There is no entity with id: ${props.params.entityId}`,
-//   };
-// }
+  if (!singleProduct) {
+    return productNotFoundMetadata;
+  }
 
-// export default function EntityNotFound() {
-//   return <div>Sorry this Entity was not found</div>;
-// }
-// // app/error.js
+  return {
+    title: singleProduct.name,
+    description: `Single product page for ${singleProduct.name}`,
+  };
+}
 
-// export const metadata = {
-//   title: 'Error',
-//   description: 'ups something went wrong',
-// };
+type Props = {
+  params: {
+    productId: string,
+  },
+};
 
-// export function Error() {
-//   return <div>Sorry this Entity was not found</div>;
-// }
+export default async function AnimalPage(props: Props) {
+  const singleProduct = await getProductById(parseInt(props.params.productId));
 
-export default function ProducktPage({ params }) {
-  const singleProduct = products.find((product) => {
-    return product.name.toLowerCase() === params.productName;
-  });
+  if (!singleProduct) {
+    notFound();
+  }
 
   return (
     <>
-      <h1>{singleProduct.firstName}</h1>
+      <h1>{singleProduct.name}</h1>
       <main>
-        This product is a {singleProduct.type} {singleProduct.accessory}
+        This product is a {singleProduct.type}
         <br />
         <Image
-          src={`/images/${singleProduct.name}-${singleProduct.id}.jpeg`}
+          src={`/images/${singleProduct.name}-${singleProduct.id}.jpg`}
           alt={singleProduct.type}
           width="200"
           height="200"
         />
-        <button>by now</button>
       </main>
     </>
   );

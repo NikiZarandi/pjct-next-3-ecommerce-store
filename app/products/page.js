@@ -1,8 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
-// import { getTrailingCommentRanges } from 'typescript';
-// eslint-disable-next-line import/no-unresolved
-import { products } from '../databace';
+import { getProducts } from '../../database/products';
+import styles from './page.module.scss';
 
 // export const dynamic = 'force-dynamic';
 
@@ -14,29 +13,37 @@ import { products } from '../databace';
 //   { id: 6, name: 'mina', type: 'ring' },
 //   { id: 7, name: 'maya', type: 'ring' },
 // ];
+export const metadata = {
+  title: 'Products',
+  description: 'This is my Products page',
+};
 
-export default function ProductsPage() {
+export default async function ProductsPage() {
+  const products = await getProducts();
   return (
-    <>
-      <h1>Products</h1>
-      <main>
+    <div className={styles.mainHolder}>
+      {/* <h1 className={styles.h1}>Products</h1> */}
+
+      <main className={styles.mainContainer}>
         {products.map((product) => {
           return (
-            <div key={product.id}>
-              <Link href={`/products/${product.name.toLocaleLowerCase()}`}>
-                <h2>{product.name}</h2>
+            <div key={product.id} data-test-id={`product-type-${product.type}`}>
+              <Link href={`/products/${product.id}`}>
+                <h2 className={styles.h2}>{product.name}</h2>
               </Link>
-
-              <Image
-                src={`/images/${product.name}-${product.id}.jpeg`}
-                alt={product.type}
-                width="200"
-                height="200"
-              />
+              <Link href={`/products/${product.id}`}>
+                <Image
+                  className={styles.column}
+                  src={`/images/${product.name}-${product.id}.jpeg`}
+                  alt={product.type}
+                  width="200"
+                  height="200"
+                />
+              </Link>
             </div>
           );
         })}
       </main>
-    </>
+    </div>
   );
 }
