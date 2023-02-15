@@ -98,10 +98,19 @@ export default function singleProduct({ params }) {
 
 
 
-export default function singleProduct(props: Props) {
+
+
+
+
+
+'use client';
+
+import { getParsedCookie, setStringifiedCookie } from '../../../utils/cookies';
+
+export default function product(props: Props) {
   return (
     <div>
-      <h2>{props.product.name}</h2>
+      {/* <h2>{props.product.name}</h2> */}
       <button
         onClick={() => {
           // get the cookie
@@ -122,7 +131,7 @@ export default function singleProduct(props: Props) {
             // update the cookie with the new values
             foundProduct.stars--;
             // if there is a negative value set number to 0
-            if (productProduct.stars < 0) {
+            if (foundProduct.stars < 0) {
               foundProduct.stars = 0;
             }
             // Update the cookie after transformation
@@ -152,13 +161,13 @@ export default function singleProduct(props: Props) {
           });
 
           // my product is inside of the cookie
-          if (foundFruit) {
+          if (foundProduct) {
             // Add a start to the foundFruit
             foundProduct.stars++;
             // my product is not inside of the cookie
           } else {
             // Add a the product to the array of products in cookies
-            fruitsInCookies.push({ id: props.product.id, stars: 1 });
+            productsInCookies.push({ id: props.product.id, stars: 1 });
           }
 
           // Update the cookie after transformation

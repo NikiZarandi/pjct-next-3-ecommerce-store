@@ -1,14 +1,12 @@
-// 'use client';
-
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { getProductById, Product } from '../../../database/products';
-
+// 'use client';
 // import { getParsedCookie, setStringifiedCookie } from '../../../utils/cookies';
-
 // import { productNotFoundMetadata } from './not-found';
-
 // export const dynamic = 'force-dynamic';
+import IndexPage from './product';
+import product from './product';
 
 type Props = {
   product: any;
@@ -46,8 +44,6 @@ export default async function ProductPage(props: Props) {
           width="200"
           height="200"
         />
-        <button>+</button>
-        <button>-</button>
       </main>
     </>
   );

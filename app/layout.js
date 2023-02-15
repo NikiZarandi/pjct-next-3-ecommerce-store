@@ -28,7 +28,7 @@ export default function RootLayout({ children }) {
                 <a href="/products">Products</a>
               </li>
               <li>
-                <a href="/aboutUs">About us</a>
+                <a href="/aboutUs">your cart</a>
               </li>
               <li>
                 <a href="/contact">Contact</a>
