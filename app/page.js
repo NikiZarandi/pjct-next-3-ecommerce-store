@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import CookieBanner from './cookieBanner';
 import GenerateButten from './GenerateButton js./GenerateButton';
 import styles from './page.module.scss';
 

@@ -13,6 +13,17 @@ import styles from './page.module.scss';
 //   { id: 6, name: 'mina', type: 'ring' },
 //   { id: 7, name: 'maya', type: 'ring' },
 // ];
+
+// export default function ProductsPage () {
+//   const productsCookie = cookies().get('cookies');
+// }
+
+// let productsCookieParsed = [];
+
+// if (productsCookie) {
+//   productsCookieParsed = JSON.parse(productsCookie.value);
+// }
+
 export const metadata = {
   title: 'Products',
   description: 'This is my Products page',
@@ -26,6 +37,7 @@ export default async function ProductsPage() {
 
       <main className={styles.mainContainer}>
         {products.map((product) => {
+          console.log(products);
           return (
             <div key={product.id} data-test-id={`product-type-${product.type}`}>
               <Link href={`/products/${product.id}`}>
@@ -33,8 +45,7 @@ export default async function ProductsPage() {
               </Link>
               <Link href={`/products/${product.id}`}>
                 <Image
-                  className={styles.column}
-                  src={`/images/${product.name}-${product.id}.jpeg`}
+                  src={`/images/${product.name}.jpeg`}
                   alt={product.type}
                   width="200"
                   height="200"
