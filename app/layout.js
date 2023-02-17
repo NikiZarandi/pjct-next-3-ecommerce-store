@@ -1,6 +1,14 @@
 import './global.scss';
+import ItemsInCart from '../app/ItemsInCart';
 import CookieBanner from './CookieBanner';
 import styles from './layout.module.scss';
+
+export const metadata = {
+  title: {
+    default: 'Global Shop',
+    template: 'Global Shop | %s',
+  },
+};
 
 export default function RootLayout({ children }) {
   return (
@@ -28,7 +36,9 @@ export default function RootLayout({ children }) {
                 <a href="/products">Products</a>
               </li>
               <li>
-                <a href="/aboutUs">your cart</a>
+                <a href="/cart">
+                  🛒 <ItemsInCart />
+                </a>
               </li>
               <li>
                 <a href="/contact">Contact</a>

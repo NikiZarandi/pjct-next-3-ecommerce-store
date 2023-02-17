@@ -1,12 +1,7 @@
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { getProductById, Product } from '../../../database/products';
-// 'use client';
-// import { getParsedCookie, setStringifiedCookie } from '../../../utils/cookies';
-// import { productNotFoundMetadata } from './not-found';
-// export const dynamic = 'force-dynamic';
-import IndexPage from './product';
-import product from './product';
+import IndexPage from './Product';
 
 type Props = {
   product: any;
@@ -30,13 +25,13 @@ export default async function ProductPage(props: Props) {
 
   return (
     <>
-      <h1>{singleProduct.name}</h1>
+      {/* <h1>{singleProduct.name}</h1> */}
       <main>
-        This is a {singleProduct.type}
+        {/* This is a {singleProduct.type}
         <br />
         The price is : {singleProduct.price}
         <br />
-        product name :{singleProduct.name}
+        product name :{singleProduct.name} */}
         <br />
         <Image
           src={`/images/${singleProduct.name}.jpeg`}
@@ -44,6 +39,7 @@ export default async function ProductPage(props: Props) {
           width="200"
           height="200"
         />
+        <IndexPage product={singleProduct} />
       </main>
     </>
   );

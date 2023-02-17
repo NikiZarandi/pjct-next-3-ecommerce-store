@@ -16,8 +16,8 @@ export function getParsedCookie(key: string): CookieValue | undefined {
 }
 
 export type CookieValue = {
+  amount: number;
   id: number;
-  stars: number;
 }[];
 
 // more robust way to set items to set the cookie without stringify all the time
