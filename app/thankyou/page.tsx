@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import thankyou_bg from '../../../../../thankyou_bg.jpeg';
+import thankyou_bg from '../../public/images/thankyou_bg.jpeg';
 import styles from './page.module.scss';
 
 export const metadata = {

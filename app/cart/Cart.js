@@ -8,8 +8,7 @@ import RemoveProductButton from './RemoveProductButton';
 
 export const metadata = {
   title: 'Cart',
-  description:
-    'Your journey to wellness is just a few clicks away. Review your Pilates purchases and complete your transaction securely on our online store. Embrace a healthier, stronger you with our personalized classes and equipment.',
+  description: 'Review your purchases.',
   icons: {
     shortcut: '/icon.svg',
   },
