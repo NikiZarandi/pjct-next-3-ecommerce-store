@@ -1,9 +1,9 @@
-'use client';
+// 'use client';
 
-import { useState } from 'react';
+// import { useState } from 'react';
 
-export default function GenerateButten() {
-  const [color, setColor] = useState('#123fee');
+// export default function GenerateButten() {
+//   const [color, setColor] = useState('#123fee');
 
-  return <button>buy now</button>;
-}
+//   return <button>buy now</button>;
+// }

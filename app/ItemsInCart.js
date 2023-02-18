@@ -4,7 +4,7 @@ export default function ItemsInCart() {
   const cart = cookies().get('productsCookie');
   let itemInCart = [];
   if (cart) {
-    itemInCart = JSON.parse(cart.value);
+    itemInCart = JSON.stringify(cart.value);
   }
 
   let totalAmountOfItemsInCart = 0;

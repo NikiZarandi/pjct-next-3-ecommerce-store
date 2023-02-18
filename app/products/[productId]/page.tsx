@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { getProductById, Product } from '../../../database/products';
+import styles from './page.module.scss';
 import IndexPage from './Product';
 
 type Props = {
@@ -25,15 +26,16 @@ export default async function ProductPage(props: Props) {
 
   return (
     <>
-      {/* <h1>{singleProduct.name}</h1> */}
-      <main>
-        {/* This is a {singleProduct.type}
+      <h1 className={styles.h1}>{singleProduct.name}</h1>
+      <main className={styles.mainContainer}>
+        {/* This is a {singleProduct.type} */}
         <br />
-        The price is : {singleProduct.price}
+
         <br />
-        product name :{singleProduct.name} */}
+        {/* product name :{singleProduct.name} */}
         <br />
         <Image
+          className={styles.image}
           src={`/images/${singleProduct.name}.jpeg`}
           alt={singleProduct.type}
           width="200"

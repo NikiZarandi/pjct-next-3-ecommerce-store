@@ -1,32 +1,18 @@
-import { getProducts } from '../../database/products';
-import ItemsInCart from '../ItemsInCart';
-import Checkout from './Checkout';
-import CheckoutForm from './Form';
-import styles from './page.module.scss';
+import Form from './Form';
 
 export const metadata = {
   title: 'Checkout',
-  description: 'Checkout Page',
+  description:
+    'Complete your Pilates journey with confidence on our secure checkout page. Enjoy the convenience of online shopping while we handle the rest. Your personalized classes and equipment are just a few steps away.',
+  icons: {
+    shortcut: '/icon.svg',
+  },
 };
 
-export default async function CheckoutPage() {
-  const products = await getProducts();
+export default function checkoutPage() {
   return (
-    <div className={styles.container}>
-      <div className={styles.left}>
-        <div className={styles.leftBox}>
-          <h1>Checkout</h1>
-          <CheckoutForm />
-        </div>
-      </div>
-      <div className={styles.right}>
-        <div className={styles.rightBox}>
-          <Checkout products={products} />
-          <p>
-            Items in your Cart: <ItemsInCart />
-          </p>
-        </div>
-      </div>
+    <div>
+      <Form />
     </div>
   );
 }

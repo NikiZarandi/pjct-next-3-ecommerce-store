@@ -41,7 +41,8 @@ export default function RootLayout({ children }) {
                 </a>
               </li>
               <li>
-                <a href="/contact">Contact</a>
+                <a href="/aboutUs">about us</a>
+                <aboutUsPage />
               </li>
             </ul>
           </nav>
@@ -51,11 +52,11 @@ export default function RootLayout({ children }) {
 
         <footer className={styles.footer}>
           <ul>
-            <p>ZARANDI DESIGN E.U Schopenhauer</p>
+            <p>NIKI DESIGN E.U Schopenhauer</p>
             <p>Straße 22/9 1180 Wien Austria</p>
             <p>GENERAL TERMS AND CONDITIONS IMPRESSUM DATENSCHUTZ</p>
             <p>Follow Us Instagram</p>
-            <p>service@zarandidesign.com</p>
+            <p>service@nikidesign.com</p>
           </ul>
         </footer>
       </body>

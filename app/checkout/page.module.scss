@@ -1,26 +1,27 @@
-.container {
-  display: grid;
+.checkout_formWrapper {
+  display: flex;
+  flex-direction: column;
 }
 
-.leftBox {
-  position: relative;
-  top: 48%;
-  text-align: center;
-  transform: translate(0, -50%);
+.checkout_formLayout {
+  display: flex;
+  flex-direction: row;
+  position: center;
+  align-items: left;
+
+  & label {
+    font-size: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+
+  & input {
+    width: 10%;
+    border: 1px solid #fd7291;
+    border-radius: 6px;
+  }
 }
 
-.rightBox {
-  position: relative;
-  top: 20%;
-  text-align: center;
-  transform: translate(0, -50%);
-  padding: 3rem;
-}
-
-.left {
-  grid-column: 1;
-}
-
-.right {
-  grid-column: 2;
+.checkout_lineBreak {
+  border-top: 0.5px dashed #fd7291;
 }
