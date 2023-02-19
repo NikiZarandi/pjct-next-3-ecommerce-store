@@ -1,0 +1,27 @@
+.checkout_formWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.checkout_formLayout {
+  display: flex;
+  flex-direction: row;
+  position: center;
+  align-items: left;
+
+  & label {
+    font-size: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+
+  & input {
+    width: 10%;
+    border: 1px solid #fd7291;
+    border-radius: 6px;
+  }
+}
+
+.checkout_lineBreak {
+  border-top: 0.5px dashed #fd7291;
+}

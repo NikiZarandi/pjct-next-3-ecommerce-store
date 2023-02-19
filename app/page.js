@@ -1,5 +1,6 @@
 import Image from 'next/image';
-import GenerateButten from './GenerateButton js./GenerateButton';
+import React from 'react';
+// import GenerateButten from './GenerateButton js./GenerateButton';
 import styles from './page.module.scss';
 
 export default function HomePage() {
@@ -20,7 +21,7 @@ export default function HomePage() {
           width="300"
           height="600"
         />
-        <GenerateButten />
+        {/* <GenerateButten /> */}
       </div>
     </main>
   );

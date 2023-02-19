@@ -1,14 +1,10 @@
-// 'use client';
-
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
-import { getProductById, Product } from '../../../database/products';
+import { getProductById } from '../../../database/products';
+import styles from './page.module.scss';
+import Product from './Product';
 
-// import { getParsedCookie, setStringifiedCookie } from '../../../utils/cookies';
-
-// import { productNotFoundMetadata } from './not-found';
-
-// export const dynamic = 'force-dynamic';
+export const dynamic = 'force-dynamic';
 
 type Props = {
   product: any;
@@ -32,22 +28,22 @@ export default async function ProductPage(props: Props) {
 
   return (
     <>
-      <h1>{singleProduct.name}</h1>
-      <main>
-        This is a {singleProduct.type}
+      <h1 className={styles.h1}>{singleProduct.name}</h1>
+      <main className={styles.mainContainer}>
+        {/* This is a {singleProduct.type} */}
         <br />
-        The price is : {singleProduct.price}
+
         <br />
-        product name :{singleProduct.name}
+        {/* product name :{singleProduct.name} */}
         <br />
         <Image
+          className={styles.image}
           src={`/images/${singleProduct.name}.jpeg`}
           alt={singleProduct.type}
           width="200"
           height="200"
         />
-        <button>+</button>
-        <button>-</button>
+        <Product product={singleProduct} />
       </main>
     </>
   );

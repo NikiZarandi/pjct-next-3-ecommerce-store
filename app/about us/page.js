@@ -16,14 +16,14 @@ export default function aboutUsPage() {
               <h2>{aboutUs.name}</h2>
 
               <p4>
-                ZARANDI DESIGN is an association of experienced designers,
-                artists, photographers, copywriters and sales professionals.
-                This enables us to offer top performance in every discipline and
-                to ensure your success. The primary goal of ZARANDI is that our
-                customers can stand out clearly from the competition. ZARANDI
-                DESIGN should enhance your perception and creates a clear added
-                value for you. Our design arises emotions and will boost your
-                sales by inspiring your customers!
+                NIKI DESIGN is an association of experienced designers, artists,
+                photographers, copywriters and sales professionals. This enables
+                us to offer top performance in every discipline and to ensure
+                your success. The primary goal of NIKI is that our customers can
+                stand out clearly from the competition. NIKI DESIGN should
+                enhance your perception and creates a clear added value for you.
+                Our design arises emotions and will boost your sales by
+                inspiring your customers!
               </p4>
 
               {/* <!-- <Link href={`/products/${products.name.toLowerCase()}`} /> -->

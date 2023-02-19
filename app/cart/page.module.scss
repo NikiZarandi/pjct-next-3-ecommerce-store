@@ -1,0 +1,105 @@
+.cart_pageWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  position: center;
+}
+.cart_imageLayout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: center;
+  align-content: space-between;
+
+  & a {
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    line-height: 18px;
+    text-align: left;
+  }
+
+  & p {
+    font-size: 12px;
+    line-height: 12px;
+    text-align: left;
+  }
+}
+
+.cart_textLayout {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  position: left;
+  align-items: left;
+  align-content: left;
+
+  & h3 {
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 10px;
+    color: black;
+    text-align: left;
+  }
+
+  & p {
+    line-height: 0;
+    text-align: left;
+  }
+}
+
+.cart_totalPriceLayout {
+  font-size: 30px;
+  font-weight: 800;
+}
+.cart_Button {
+  position: center;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  color: #fd7291;
+  background-color: transparent;
+  border: transparent;
+}
+
+.cart_cartBackToProducts {
+  font-size: 12px;
+  color: #fd7291;
+  position: right;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 60px;
+
+  & a {
+    text-decoration: none;
+    color: #fd7291;
+  }
+
+  & a:hover {
+    cursor: crosshair;
+  }
+}
+
+.cart_lineBreak {
+  border-top: 0.5px dashed #fd7291;
+}
+.cart_checkoutButton {
+  border: 1px solid #fd7291;
+  background: transparent;
+  // border-radius: 5px;
+  font-family: 'IBM Plex Mono';
+  width: 300px;
+  height: 40px;
+  margin-top: 10px;
+
+  a:hover {
+    background-color: #fd7291;
+  }
+}
+
+.cart_removeButton {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}

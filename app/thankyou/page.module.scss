@@ -1,0 +1,53 @@
+.thankyou_layoutWrapper {
+  overflow: hidden;
+}
+
+.thankyou_backgroundImage {
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 0;
+  text-align: center;
+  overflow: hidden;
+}
+
+.thankyou_textLayout {
+  max-width: 35rem;
+  width: 100%;
+  position: relative;
+  height: 100vh;
+  z-index: 1;
+  text-align: center;
+  margin-left: 400px;
+  margin-top: 260px;
+
+  & h1 {
+    text-align: center;
+    color: white;
+  }
+
+  & p {
+    color: white;
+    line-height: 30px;
+    margin: 0;
+  }
+}
+
+.thankyou_backToHomeNav {
+  font-size: 14px;
+  text-decoration: none;
+  color: white;
+
+  & a {
+    font-size: 14px;
+    text-decoration: none;
+    color: white;
+  }
+  & :hover {
+    color: #fd7291;
+    cursor: crosshair;
+  }
+}

@@ -1,8 +1,47 @@
 import './global.scss';
-import CookieBanner from './CookieBanner';
+import { cookies } from 'next/headers';
+import { getProducts } from '../database/products';
+import CookieBanner from './cookieBanner';
 import styles from './layout.module.scss';
 
-export default function RootLayout({ children }) {
+export const metadata = {
+  title: {
+    default: 'Global Shop',
+    template: 'Global Shop | %s',
+  },
+};
+
+export default async function RootLayout({ children }) {
+  const products = await getProducts();
+  const productsCookie = cookies().get('cart');
+
+  let productsCookieParsed = [];
+
+  if (productsCookie) {
+    productsCookieParsed = JSON.parse(productsCookie.value);
+  }
+
+  const productsWithQuantity = products.map((product) => {
+    const productWithQuantity = { ...product, amount: 0 };
+
+    // read the cookie and find the product
+
+    const productInCookie = productsCookieParsed.find(
+      (productObject) => product.id === productObject.id,
+    );
+
+    // if product is found the quantity gets updated
+    if (productInCookie) {
+      productWithQuantity.amount = productInCookie.amount;
+    }
+    return productWithQuantity;
+  });
+
+  // Calculate total sum of price
+  let totalQuantity = 0;
+  productsWithQuantity.forEach((product) => {
+    totalQuantity += product.amount;
+  });
   return (
     // eslint-disable-next-line jsx-a11y/html-has-lang
     <html>
@@ -28,10 +67,13 @@ export default function RootLayout({ children }) {
                 <a href="/products">Products</a>
               </li>
               <li>
-                <a href="/aboutUs">About us</a>
+                <a href="/cart">
+                  🛒 cart {totalQuantity} <cartPage />
+                </a>
               </li>
               <li>
-                <a href="/contact">Contact</a>
+                <a href="/aboutUs">about us</a>
+                <aboutUsPage />
               </li>
             </ul>
           </nav>
@@ -41,11 +83,11 @@ export default function RootLayout({ children }) {
 
         <footer className={styles.footer}>
           <ul>
-            <p>ZARANDI DESIGN E.U Schopenhauer</p>
+            <p>NIKI DESIGN E.U Schopenhauer</p>
             <p>Straße 22/9 1180 Wien Austria</p>
             <p>GENERAL TERMS AND CONDITIONS IMPRESSUM DATENSCHUTZ</p>
             <p>Follow Us Instagram</p>
-            <p>service@zarandidesign.com</p>
+            <p>service@nikidesign.com</p>
           </ul>
         </footer>
       </body>
