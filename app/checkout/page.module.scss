@@ -1,27 +1,84 @@
 .checkout_formWrapper {
   display: flex;
   flex-direction: column;
+  background-color: white;
+  align-items: center;
+  font-family: Raleway;
 }
-
 .checkout_formLayout {
   display: flex;
   flex-direction: row;
   position: center;
   align-items: left;
+  font-family: Raleway;
 
   & label {
+    display: flex;
     font-size: 10px;
     margin-right: 10px;
     margin-left: 10px;
+    font-family: Raleway;
   }
 
   & input {
     width: 10%;
-    border: 1px solid #fd7291;
-    border-radius: 6px;
+    border: 1px solid #aa994d;
+    border-radius: 0px;
+    width: 300px;
+    font-family: Raleway;
   }
 }
 
-.checkout_lineBreak {
-  border-top: 0.5px dashed #fd7291;
-}
+// .checkout_lineBreak {
+//   border-top: 0.5px dashed #fd7291;
+
+//   .smlinput {
+//     padding: 0.6em 0.25em 0;
+//     font-size: 1.3em;
+//     height: 1.5em;
+//     margin-bottom: 0.25em;
+//     border: none;
+//     border-bottom: 1px solid peachpuff;
+//     font-family: Raleway;
+//     font-weight: 100;
+//     border-radius: 0.25em;
+//     margin-top: 10px;
+//     margin-left: 5px;
+//     width: 150px;
+//     padding: 20px;
+//   }
+
+//   .form {
+//     padding: 20px;
+//     display: grid;
+//     flex-wrap: wrap;
+//     justify-content: space-between;
+//     align-items: center;
+//     border-radius: 0.375em;
+//   }
+
+//   .h1 {
+//     text-align: center;
+//   }
+
+//   .confirm {
+//     border-radius: 8px;
+//     border: 2px solid #6d4833;
+//     padding-top: 15px;
+//     padding-bottom: 15px;
+//     font-family: raleway;
+//     display: flex;
+//     justify-content: center;
+//     width: 100%;
+//     font-size: 18px;
+//     color: #6d4833;
+//   }
+
+//   .link {
+//     text-decoration: none;
+//   }
+
+//   .buttoncontainer {
+//     align-items: center;
+//   }
+// }

@@ -3,6 +3,7 @@ import { useRouter } from 'next/navigation';
 import React, { useState } from 'react';
 import { products } from '../../../migrations/1676216545-createTableProduct.mjs';
 import { getParsedCookie, setStringifiedCookie } from '../../../utils/cookies';
+import styles from './page.module.scss';
 
 // import styles from './Products.module.scss';
 
@@ -11,12 +12,13 @@ export default function Product(props) {
   const router = useRouter();
 
   return (
-    <>
+    <div>
       <p>Count: {count}</p>
       <button onClick={() => setCount(count <= 1 ? 1 : count - 1)}>-</button>
       <button onClick={() => setCount(count + 1)}>+</button>
 
       <button
+        className={styles.button_formWrapper}
         onClick={() => {
           // get the cookie
           const producstInCookies = getParsedCookie('cart');
@@ -56,6 +58,6 @@ export default function Product(props) {
       >
         Add to Cart
       </button>
-    </>
+    </div>
   );
 }

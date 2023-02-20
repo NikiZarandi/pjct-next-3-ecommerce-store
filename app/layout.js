@@ -57,7 +57,7 @@ export default async function RootLayout({ children }) {
               width="300"
               height="600"
             />
-            <ul className={styles.navBarContainer}>
+            <ul>
               <li>
                 <a className="active" href="/">
                   Home
@@ -71,10 +71,6 @@ export default async function RootLayout({ children }) {
                   🛒 cart {totalQuantity} <cartPage />
                 </a>
               </li>
-              <li>
-                <a href="/aboutUs">about us</a>
-                <aboutUsPage />
-              </li>
             </ul>
           </nav>
         </header>
@@ -84,9 +80,11 @@ export default async function RootLayout({ children }) {
         <footer className={styles.footer}>
           <ul>
             <p>NIKI DESIGN E.U Schopenhauer</p>
+            <p>NIKI DESIGN E.U Schopenhauer</p>
             <p>Straße 22/9 1180 Wien Austria</p>
             <p>GENERAL TERMS AND CONDITIONS IMPRESSUM DATENSCHUTZ</p>
             <p>Follow Us Instagram</p>
+            <p>service@nikidesign.com</p>
             <p>service@nikidesign.com</p>
           </ul>
         </footer>

@@ -4,7 +4,7 @@ import { useRouter } from 'next/navigation';
 import { getParsedCookie, setStringifiedCookie } from '../../utils/cookies';
 import styles from './page.module.scss';
 
-export default function deleteProduct(props) {
+export default function RemoveButton(props) {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const router = useRouter();
 
@@ -22,7 +22,7 @@ export default function deleteProduct(props) {
         router.refresh();
       }}
     >
-      [ x ]
+      [ remove ]
     </button>
   );
 }

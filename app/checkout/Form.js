@@ -19,72 +19,37 @@ export default function FormComponent() {
 
   return (
     <div>
-      <h4>Shipping Address</h4>
       <main className={styles.checkout_formWrapper}>
+        <h6>Shipping Address & Credit card details</h6>
+
         <div className={styles.checkout_formLayout}>
           <form onSubmit={handleSubmit}>
             <label htmlFor="first">First name</label>
-            <input
-              onChange={onChange}
-              data-test-id="checkout-first-name"
-              name="first"
-            />
+            <input onChange={onChange} name="first" />
             <label htmlFor="first">Last name</label>
-            <input
-              onChange={onChange}
-              data-test-id="checkout-last-name"
-              name="last"
-            />
+            <input onChange={onChange} name="last" />
             <br />
             <label htmlFor="e-mail">E-mail</label>
-            <input
-              onChange={onChange}
-              data-test-id="checkout-e-mail"
-              name="e-mail"
-            />
+            <input onChange={onChange} name="e-mail" />
             <label htmlFor="address">Address</label>
-            <input
-              onChange={onChange}
-              data-test-id="checkout-address"
-              name="address"
-            />
+            <input onChange={onChange} name="address" />
             <br />
             <label htmlFor="city">City</label>
 
-            <input
-              onChange={onChange}
-              data-test-id="checkout-city"
-              name="city"
-            />
+            <input onChange={onChange} name="city" />
             <label htmlFor="postal-code">Postal code</label>
-            <input
-              onChange={onChange}
-              data-test-id="checkout-postal-code"
-              name="postal-code"
-            />
+            <input onChange={onChange} name="postal-code" />
             <hr className={styles.checkout_lineBreak} />
-            <h4>Credit card details</h4>
+
             <label htmlFor="credit-card">Credit card number</label>
-            <input
-              onChange={onChange}
-              data-test-id="checkout-credit-card"
-              name="credit-card"
-            />
+            <input onChange={onChange} name="credit-card" />
             <label htmlFor="expiration-date">Expiration date</label>
-            <input
-              onChange={onChange}
-              data-test-id="checkout-expiration-date"
-              name="expiration-date"
-            />
+            <input onChange={onChange} name="expiration-date" />
             <br />
             <label htmlFor="security-code">Security code</label>
-            <input
-              onChange={onChange}
-              data-test-id="checkout-security-code"
-              name="security-code"
-            />
+            <input onChange={onChange} name="security-code" />
             <br />
-            <button data-test-id="checkout-confirm-order">confirm order</button>
+            <button>confirm order</button>
           </form>
         </div>
       </main>

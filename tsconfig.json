@@ -10,7 +10,8 @@
     "**/*.cjs",
     "**/*.mjs",
     ".next/types/**/*.ts",
-    "next-env.d.ts"
+    "next-env.d.ts",
+    "app/products/[productId]/page.tax"
   ],
   "compilerOptions": {
     "jsx": "preserve",

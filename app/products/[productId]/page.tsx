@@ -27,24 +27,20 @@ export default async function ProductPage(props: Props) {
   }
 
   return (
-    <>
+    <main className={styles.mainContainer}>
+      {/* This is a {singleProduct.type} */}
       <h1 className={styles.h1}>{singleProduct.name}</h1>
-      <main className={styles.mainContainer}>
-        {/* This is a {singleProduct.type} */}
-        <br />
-
-        <br />
-        {/* product name :{singleProduct.name} */}
-        <br />
-        <Image
-          className={styles.image}
-          src={`/images/${singleProduct.name}.jpeg`}
-          alt={singleProduct.type}
-          width="200"
-          height="200"
-        />
-        <Product product={singleProduct} />
-      </main>
-    </>
+      <br />
+      <br />
+      <br />
+      <Image
+        className={styles.imageProducts}
+        src={`/images/${singleProduct.name}.jpeg`}
+        alt={singleProduct.type}
+        width="300"
+        height="300"
+      />
+      <Product product={singleProduct} />
+    </main>
   );
 }
